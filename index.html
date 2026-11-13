@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Навчальний модуль для 10 класу: мережевий хаб і професійна комунікація в цифрових спільнотах.">
+<title>Мережевий хаб — 10 клас</title>
+<style>
+:root{--navy:#14245a;--blue:#1769e8;--violet:#6547d9;--ink:#18213d;--muted:#64708b;--bg:#f3f6ff;--line:#dce4fb;--green:#079b68;--orange:#ffb33f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,Segoe UI,Arial,sans-serif}
+header{background:linear-gradient(115deg,#101b50,#075caa 60%,#382d91);color:white;padding:28px max(20px,calc((100vw - 1200px)/2));}
+header img{display:block;width:100%;max-height:360px;object-fit:cover;border-radius:18px;box-shadow:0 12px 35px #08174355}
+header p{margin:12px 0 0;color:#dbe9ff}
+main{max-width:1200px;margin:24px auto;padding:0 18px}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.nav button,.btn{border:0;border-radius:12px;padding:11px 17px;font-weight:700;cursor:pointer;background:#e4eaff;color:#18356e}.nav button.active,.btn.primary{background:var(--blue);color:white}.btn.secondary{background:#e9e6ff;color:#4931ae}.btn:disabled{opacity:.5;cursor:not-allowed}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 8px 25px #1b39730b}
+h1{font-size:clamp(27px,4vw,42px);line-height:1.12;margin:0}h2{color:var(--navy);margin:0 0 12px}h3{margin:0 0 8px;color:#1a3673}
+.lead{font-size:18px;color:#465575}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.concept{border:1px solid var(--line);border-radius:15px;padding:17px;background:linear-gradient(140deg,#fff,#f7f9ff)}
+.concept .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--blue);color:white;font-weight:800;margin-right:8px}
+.callout{padding:15px 18px;border-radius:14px;background:#fff5df;border-left:5px solid var(--orange);margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f0f4ff}
+.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#eef2ff;color:#324b91;padding:5px 10px;border-radius:20px;font-size:13px}
+.hidden{display:none!important}.profile{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.profile strong{font-size:18px}.stat{background:#f0f4ff;border-radius:12px;padding:10px 14px;font-weight:700}
+.progress{height:12px;background:#e6ebf7;border-radius:20px;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,#1684ef,#6a4add);width:0;transition:width .3s}
+.tasktop{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-weight:700}.task h3{font-size:22px;margin:12px 0}.task-desc{color:#4e5c7c}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:white;padding:13px;border-radius:12px;margin:9px 0;cursor:pointer}.option.selected{border:2px solid var(--blue);background:#edf4ff}
+.draglist{display:grid;gap:9px}.draggable{padding:12px 14px;border:1px solid #ccd7f1;border-radius:12px;background:#f8faff;cursor:grab;font-weight:650;touch-action:pan-y}.draggable.dragging{opacity:.4}.dropzone{min-height:54px;border:2px dashed #aab9df;border-radius:12px;padding:9px;margin:7px 0;background:#fbfcff}.dropzone.over{background:#e9f2ff;border-color:var(--blue)}.dropzone b{display:block;font-size:13px;color:#66749a;margin-bottom:5px}
+.feedback{padding:13px;border-radius:12px;margin-top:14px;font-weight:650}.good{background:#e4f8ef;color:#08764e}.bad{background:#fff0ed;color:#a63828}
+footer{text-align:center;color:#6b7691;padding:25px}
+.modal{position:fixed;inset:0;background:#07143dcc;display:grid;place-items:center;padding:18px;z-index:9}.modalbox{background:white;border-radius:18px;padding:25px;max-width:460px;width:100%}input{width:100%;padding:12px;border:1px solid #bdc9e4;border-radius:10px;margin:6px 0 14px;font:inherit}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.panel{padding:16px}header{padding:16px}header img{max-height:230px}table{font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<img src="assets/hero.png" alt="Ілюстрація цифрової професійної спільноти та навчального тренажера">
+<p>НАВЧАЛЬНИЙ МОДУЛЬ · ІНФОРМАТИКА · 10 КЛАС</p>
+<h1>Мережевий хаб: особливості професійної комунікації в цифрових спільнотах</h1>
+<p>Навчайся · Спілкуйся · Співпрацюй · Розвивайся</p>
+</header>
+<main>
+<div class="nav">
+<button class="active" data-tab="theory">📘 Теоретичний блок</button>
+<button data-tab="practice">🎮 Практикум — 20 вправ</button>
+<button data-tab="about">📄 Звіт і збереження</button>
+</div>
+
+<section id="theory" class="tab">
+<div class="panel">
+<h2>Теоретичний блок</h2>
+<p class="lead">Цифрове середовище давно стало простором навчання, професійного розвитку та спільної роботи. Уміння комунікувати онлайн — важлива складова цифрової грамотності сучасної людини.</p>
+<div class="grid">
+<article class="concept"><h3><span class="num">1</span>Мережевий хаб</h3><p><b>Мережевий хаб</b> — центр взаємодії, обміну інформацією та співпраці між людьми, командами або організаціями в цифровому середовищі. Учасники обговорюють ідеї, шукають партнерів, поширюють знання та працюють над спільними проєктами.</p><p>Приклад: онлайн-спільнота учнів, які разом створюють цифровий проєкт.</p></article>
+<article class="concept"><h3><span class="num">2</span>Цифрова спільнота</h3><p><b>Цифрова спільнота</b> — група людей, об'єднаних спільними інтересами, професійними цілями або навчальними завданнями, які взаємодіють через інтернет.</p><p>Її ознаки: спільна мета, регулярна комунікація, взаємодопомога, цифрові інструменти та узгоджені правила поведінки.</p></article>
+<article class="concept"><h3><span class="num">3</span>Професійна комунікація</h3><p><b>Професійна комунікація</b> — обмін інформацією, досвідом, ідеями та результатами діяльності для розв'язання робочих, освітніх або організаційних завдань.</p><ul><li>діловий і доброзичливий стиль;</li><li>чіткість та лаконічність;</li><li>відповідальність за інформацію;</li><li>конфіденційність;</li><li>конструктивний зворотний зв'язок.</li></ul></article>
+<article class="concept"><h3><span class="num">4</span>Форми взаємодії</h3><p>Відеоконференції, електронна пошта, тематичні форуми, групові чати, спільне редагування документів, цифрові дошки та системи керування проєктами.</p><p>Інструмент обирають відповідно до мети: швидке обговорення, офіційне повідомлення, спільне створення продукту чи зберігання матеріалів.</p></article>
+<article class="concept"><h3><span class="num">5</span>Синхронна й асинхронна комунікація</h3><p><b>Синхронна</b> відбувається одночасно: відеозустріч, телефонний дзвінок, чат у реальному часі.</p><p><b>Асинхронна</b> — учасники відповідають у зручний час: електронна пошта, форум, коментарі до документа.</p></article>
+<article class="concept"><h3><span class="num">6</span>Цифровий етикет — Netiquette</h3><p>Netiquette — правила ввічливої, безпечної та відповідальної поведінки в інтернеті. Варто вітатися, дотримуватися теми, писати грамотно, поважати час співрозмовника, не використовувати образ і не надсилати спам.</p></article>
+<article class="concept"><h3><span class="num">7</span>Цифрова безпека та репутація</h3><p>Не публікуйте чужі персональні дані й приватне листування без дозволу. Перевіряйте джерела, посилання та вкладення. Використовуйте унікальні паролі й двофакторну автентифікацію.</p><p><b>Цифровий слід</b> — інформація, яку людина залишає під час використання цифрових сервісів.</p></article>
+<article class="concept"><h3><span class="num">8</span>Зворотний зв'язок і співпраця</h3><p>Конструктивний відгук стосується роботи, а не особистості. Він називає сильні сторони, конкретизує проблему та пропонує шлях покращення. У команді важливо узгоджувати ролі, строки й очікуваний результат.</p></article>
+</div>
+<div class="callout"><b>Запам'ятай!</b> Цифрова грамотність — це не лише вміння користуватися платформами, а й здатність бути відповідальним, уважним та етичним учасником цифрового суспільства.</div>
+</div>
+<div class="panel"><h2>Платформи для професійної взаємодії</h2>
+<div class="grid">
+<div class="concept"><h3>Microsoft Teams</h3><p>Командні канали, відеозустрічі, файли та спільна робота.</p><a href="https://www.microsoft.com/microsoft-teams" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+<div class="concept"><h3>Slack</h3><p>Тематичні канали, обговорення та координація команди.</p><a href="https://slack.com/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+<div class="concept"><h3>LinkedIn</h3><p>Професійні контакти, портфоліо та пошук можливостей.</p><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+<div class="concept"><h3>Discord</h3><p>Тематичні спільноти, голосові канали й обмін матеріалами.</p><a href="https://discord.com/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+<div class="concept"><h3>Google Workspace</h3><p>Спільне редагування документів, таблиць і презентацій.</p><a href="https://workspace.google.com/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+<div class="concept"><h3>GitHub</h3><p>Спільна робота над кодом, історія змін, issues та проєкти.</p><a href="https://github.com/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div>
+</div></div>
+<div class="panel"><h2>Переваги та ризики цифрової комунікації</h2><div class="grid">
+<div class="concept"><h3>Переваги</h3><ul><li>співпраця без географічних меж;</li><li>швидкий обмін знаннями;</li><li>економія часу й ресурсів;</li><li>розвиток професійних контактів;</li><li>спільні творчі та навчальні проєкти.</li></ul></div>
+<div class="concept"><h3>Ризики</h3><ul><li>неправдива інформація;</li><li>витік даних і порушення приватності;</li><li>кібербулінг та конфлікти;</li><li>фішинг і шахрайство;</li><li>непорозуміння через брак невербальних сигналів.</li></ul></div>
+</div></div>
+<div class="panel"><h2>Словник понять</h2><table><tr><th>Термін</th><th>Пояснення</th></tr>
+<tr><td>Мережевий хаб</td><td>Центр цифрової взаємодії та обміну інформацією.</td></tr><tr><td>Цифрова спільнота</td><td>Група людей зі спільними інтересами, що взаємодіють онлайн.</td></tr><tr><td>Netiquette</td><td>Правила етичної поведінки в інтернеті.</td></tr><tr><td>Нетворкінг</td><td>Створення й підтримка корисних професійних контактів.</td></tr><tr><td>Синхронна комунікація</td><td>Спілкування в реальному часі.</td></tr><tr><td>Асинхронна комунікація</td><td>Спілкування з відкладеною відповіддю.</td></tr><tr><td>Цифровий слід</td><td>Дані та відомості, що залишаються після онлайн-діяльності.</td></tr><tr><td>Зворотний зв'язок</td><td>Реакція на повідомлення, дію або результат роботи.</td></tr></table></div>
+</section>
+
+<section id="practice" class="tab hidden">
+<div class="panel">
+<div class="profile"><div><strong id="studentName">Учасник</strong><div class="tasktop" id="studentClass">Навчальний тренажер</div></div><div class="stat">⭐ <span id="score">0</span> балів</div><div class="stat">🔁 Спроб: <span id="attempts">0</span></div><div class="stat">🏁 <span id="done">0</span>/20</div><button class="btn secondary" id="reportBtn">Завантажити PDF-звіт</button></div>
+<div class="progress"><span id="progressBar"></span></div>
+<p class="tasktop"><span id="progressText">Виконано 0 із 20 вправ</span><span>Максимум: 100 балів</span></p>
+</div>
+<div class="panel task">
+<div class="tasktop"><span id="taskNumber">Вправа 1 із 20</span><span id="taskType">Інтерактивне завдання</span></div>
+<h3 id="taskTitle"></h3><p class="task-desc" id="taskPrompt"></p>
+<div id="taskArea"></div><div id="feedback" aria-live="polite"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="btn primary" id="checkBtn">Перевірити відповідь</button><button class="btn secondary" id="nextBtn" disabled>Наступна вправа →</button><button class="btn" id="resetTaskBtn">Скинути відповідь</button></div>
+</div>
+<div class="panel"><h2>Ваш прогрес</h2><p>Відповіді та найкращий результат зберігаються в цьому браузері на цьому пристрої. Після входу з іншого пристрою прогрес автоматично не переноситься.</p><button class="btn" id="changeUser">Змінити учасника</button> <button class="btn" id="clearProgress">Очистити мій прогрес</button></div>
+</section>
+
+<section id="about" class="tab hidden"><div class="panel"><h2>Звіт про виконання</h2><p>Після проходження вправ натисніть кнопку «Завантажити PDF-звіт». У звіті будуть ім'я учасника, клас, дата, кількість виконаних завдань, бали, спроби та відповіді.</p><div class="callout"><b>Збереження:</b> дані залишаються в LocalStorage браузера. Рекомендуємо завантажити PDF після завершення та передати його вчителю.</div><button class="btn primary" id="reportBtn2">Завантажити PDF-звіт</button></div></section>
+</main><footer>Навчальний модуль для 10 класу · Мережевий хаб · GitHub Pages ready</footer>
+
+<div class="modal" id="registerModal"><div class="modalbox"><h2>Реєстрація учасника</h2><p>Введіть дані, щоб розпочати роботу. Вони використовуються лише для формування вашого звіту.</p><label>Ім'я та прізвище<input id="nameInput" placeholder="Наприклад, Андрій Петренко" maxlength="70"></label><label>Клас<input id="classInput" placeholder="Наприклад, 10-А" maxlength="20"></label><button class="btn primary" id="startBtn">Почати роботу</button></div></div>
+<script>
+const tasks = [
+{type:"order",title:"Впорядкуйте правила цифрового етикету",prompt:"Перетягніть картки так, щоб отримати логічну послідовність дій перед публікацією повідомлення.",items:["Визначте мету повідомлення","Сформулюйте думку чітко й ввічливо","Перевірте факти та правопис","Переконайтеся, що немає приватних даних","Надішліть повідомлення"],answer:[0,1,2,3,4]},
+{type:"choice",title:"Оберіть професійну відповідь",prompt:"Колега запитує, чи готова ваша частина спільного проєкту. Яка відповідь найкраща?",options:["«Та скоро буде, не нервуй»","«Доброго дня! Завершу свою частину сьогодні до 16:00 і повідомлю команду»","«Не знаю. Запитайте когось іншого»"],answer:1,explain:"Професійна відповідь конкретна, ввічлива та містить зрозумілий строк."},
+{type:"categorize",title:"Синхронна чи асинхронна комунікація?",prompt:"Перетягніть кожен приклад до відповідної категорії.",items:["Відеоконференція","Електронний лист","Онлайн-дзвінок","Коментар у форумі","Спільний документ із відкладеним відгуком","Чат у реальному часі"],zones:["Синхронна","Асинхронна"],map:[0,1,0,1,1,0]},
+{type:"choice",title:"Виявляємо фішинг",prompt:"Ви отримали лист: «Ваш акаунт заблокують! Негайно перейдіть за посиланням і введіть пароль». Що робити?",options:["Перейти за посиланням і ввести пароль","Переслати лист друзям","Не відкривати посилання, перевірити відправника й повідомити відповідального"],answer:2,explain:"Терміновість, залякування та вимога пароля — типові ознаки фішингу."},
+{type:"match",title:"Доберіть платформу до завдання",prompt:"Перетягніть платформу до її типового призначення.",items:["LinkedIn","Microsoft Teams","GitHub","Google Workspace"],zones:["Професійні контакти","Командні зустрічі та канали","Спільна робота над кодом","Спільне редагування документів"],map:[0,1,2,3]},
+{type:"choice",title:"Конструктивний зворотний зв'язок",prompt:"Однокласник надіслав презентацію з нечіткими діаграмами. Який коментар конструктивний?",options:["«Жахливо, перероби все»","«Діаграми складно читати. Спробуй збільшити підписи й додати назви осей»","«Мені не подобається»"],answer:1,explain:"Конструктивний відгук описує конкретну проблему та пропонує спосіб покращення."},
+{type:"categorize",title:"Розподіліть повідомлення за стилем",prompt:"Віднесіть висловлювання до професійного або непрофесійного стилю.",items:["Доброго дня! Надсилаю файл для перевірки.","Ти де пропав? Відповідай негайно!!!","Дякую за зауваження. Внесу зміни до завтра.","Це повна дурниця, нічого не розумієш.","Підкажіть, будь ласка, коли зручно обговорити результат?","Кидай швидше, мені ніколи."],zones:["Професійний стиль","Непрофесійний стиль"],map:[0,1,0,1,0,1]},
+{type:"choice",title:"Захист персональних даних",prompt:"У груповому чаті просять опублікувати список телефонів учасників без їхньої згоди. Ваші дії?",options:["Опублікувати, бо попросив адміністратор","Не публікувати без дозволу власників даних","Надіслати список у відкритий канал"],answer:1,explain:"Персональні дані не можна поширювати без належної правової підстави та дозволу."},
+{type:"order",title:"Етапи організації командного проєкту",prompt:"Розташуйте кроки від задуму до підбиття підсумків.",items:["Визначити мету й очікуваний результат","Розподілити ролі та відповідальність","Узгодити строки й канали зв'язку","Виконати завдання та обмінюватися відгуками","Презентувати результат і зробити висновки"],answer:[0,1,2,3,4]},
+{type:"choice",title:"Цифровий слід",prompt:"Яке твердження найточніше пояснює поняття «цифровий слід»?",options:["Лише історія пошуку в браузері","Інформація, яку людина залишає під час користування цифровими сервісами","Тільки фотографії в соціальних мережах"],answer:1,explain:"Цифровий слід охоплює публікації, коментарі, дії та інші дані онлайн-активності."},
+{type:"match",title:"Поняття та визначення",prompt:"Зіставте термін із правильним визначенням.",items:["Netiquette","Нетворкінг","Асинхронна комунікація","Зворотний зв'язок"],zones:["Правила етичної поведінки онлайн","Створення професійних контактів","Спілкування з відкладеною відповіддю","Реакція на роботу або повідомлення"],map:[0,1,2,3]},
+{type:"choice",title:"Як реагувати на конфлікт?",prompt:"У чаті двоє учасників почали обмінюватися образами. Яка дія допоможе спільноті?",options:["Долучитися до суперечки","Поширити скриншоти в інших групах","Повернути обговорення до фактів і правил, за потреби звернутися до модератора"],answer:2,explain:"Модерація та спокійне повернення до теми допомагають знизити напруження."},
+{type:"categorize",title:"Переваги чи ризики?",prompt:"Розподіліть характеристики цифрових спільнот.",items:["Співпраця без географічних меж","Фішингові повідомлення","Швидкий обмін досвідом","Витік конфіденційних даних","Економія часу на зустрічах","Інформаційне перевантаження"],zones:["Переваги","Ризики"],map:[0,1,0,1,0,1]},
+{type:"choice",title:"Авторське право",prompt:"Ви використали зображення з інтернету у презентації. Як правильно вчинити?",options:["Приписати авторство собі","Зазначити автора й джерело та перевірити умови ліцензії","Прибрати назву автора, щоб слайд був охайним"],answer:1,explain:"Потрібно поважати авторське право, умови ліцензії та зазначати джерело."},
+{type:"order",title:"Алгоритм перевірки інформації",prompt:"Розташуйте кроки перевірки сумнівної новини.",items:["Знайти першоджерело","Перевірити дату та автора","Зіставити повідомлення з кількома надійними джерелами","Оцінити докази й контекст","Лише після перевірки вирішити, чи поширювати"],answer:[0,1,2,3,4]},
+{type:"choice",title:"Вибір каналу комунікації",prompt:"Потрібно надіслати офіційне запрошення партнерській організації з документом у вкладенні. Що доречно обрати?",options:["Електронну пошту з чіткою темою та ввічливим текстом","Мем у випадковому чаті","Публічний коментар під чужим дописом"],answer:0,explain:"Електронна пошта доречна для формального листування й передавання документів."},
+{type:"match",title:"Роль у цифровій команді",prompt:"Зіставте роль із типовим завданням.",items:["Модератор","Координатор","Автор контенту","Технічний адміністратор"],zones:["Стежить за правилами й тоном спілкування","Узгоджує строки та розподіляє роботу","Готує тексти, зображення або презентації","Налаштовує доступи й технічні інструменти"],map:[0,1,2,3]},
+{type:"choice",title:"Емпатія в онлайн-спілкуванні",prompt:"Повідомлення колеги звучить різко. Ви не впевнені, чи він/вона сердиться. Як краще діяти?",options:["Одразу відповісти ще різкіше","Уточнити зміст спокійно й доброзичливо, не робити поспішних висновків","Публічно висміяти автора"],answer:1,explain:"Текст не передає інтонацію повністю. Уточнення допомагає уникнути непорозуміння."},
+{type:"categorize",title:"Безпечна чи небезпечна дія?",prompt:"Розподіліть цифрові звички.",items:["Увімкнути двофакторну автентифікацію","Використовувати один пароль усюди","Перевіряти адресу сайту перед входом","Публікувати фото документів із персональними даними","Оновлювати програми","Відкривати невідомі вкладення"],zones:["Безпечна дія","Небезпечна дія"],map:[0,1,0,1,0,1]},
+{type:"choice",title:"Фінальна ситуація: ви — модератор хабу",prompt:"До спільноти приєднався новий учасник і поставив запитання, на яке вже відповідали. Як найкраще відреагувати?",options:["«Читайте уважніше, це вже було!»","Проігнорувати учасника","Привітати, надати посилання на попередню відповідь і коротко пояснити"],answer:2,explain:"Доброзичлива навігація підтримує відкритість спільноти та допомагає новачкам."}
+];
+let user=null, data=null, current=0, selected=null, dragOrder=[], dragMap={};
+const $=id=>document.getElementById(id);
+function key(){return "networkHub10:"+user.name.toLowerCase()+"|"+user.cls.toLowerCase()}
+function save(){if(user&&data)localStorage.setItem(key(),JSON.stringify(data))}
+function load(){try{return JSON.parse(localStorage.getItem(key()))||{attempts:0,answers:{},best:{},tries:{}}}catch(e){return {attempts:0,answers:{},best:{},tries:{}}}}
+function switchTab(tab){document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+function register(){let n=$("nameInput").value.trim(),c=$("classInput").value.trim();if(!n||!c){alert("Заповніть ім'я та клас.");return}user={name:n,cls:c};data=load();$("registerModal").classList.add("hidden");$("studentName").textContent=n;$("studentClass").textContent=c+" · ваш навчальний профіль";updateStats();render()}
+$("startBtn").onclick=register;
+function updateStats(){let done=Object.keys(data.answers).length,score=Object.values(data.best).reduce((a,b)=>a+b,0);$("score").textContent=score;$("attempts").textContent=data.attempts;$("done").textContent=done;$("progressText").textContent=`Виконано ${done} із 20 вправ`;$("progressBar").style.width=(done/20*100)+"%"}
+function render(){let t=tasks[current];selected=null;dragMap={};$("taskNumber").textContent=`Вправа ${current+1} із 20`;$("taskType").textContent=({choice:"Оберіть відповідь",order:"Перетягування · порядок",categorize:"Drag & Drop · сортування",match:"Drag & Drop · відповідність"})[t.type];$("taskTitle").textContent=t.title;$("taskPrompt").textContent=t.prompt;$("feedback").innerHTML="";$("nextBtn").disabled=true;$("checkBtn").disabled=false;
+let area=$("taskArea");area.innerHTML="";
+if(t.type==="choice"){t.options.forEach((v,i)=>{let b=document.createElement("button");b.className="option";b.textContent=v;b.onclick=()=>{selected=i;area.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));b.classList.add("selected")};area.appendChild(b)})}
+if(t.type==="order"){dragOrder=t.items.map((_,i)=>i);drawOrder(area,t)}
+if(t.type==="categorize"||t.type==="match"){let source=document.createElement("div");source.className="draglist";source.id="source";t.items.forEach((v,i)=>source.appendChild(makeDrag(v,i)));area.appendChild(source);let zones=document.createElement("div");zones.className="grid";t.zones.forEach((z,i)=>{let box=document.createElement("div");box.innerHTML=`<h3>${z}</h3><div class="dropzone" data-zone="${i}"><b>Перетягніть сюди картки</b></div>`;zones.appendChild(box)});area.appendChild(zones);setupZones(area,t)}
+}
+function makeDrag(text,i){let d=document.createElement("div");d.className="draggable";d.draggable=true;d.dataset.item=i;d.textContent="⠿  "+text;d.addEventListener("dragstart",e=>{e.dataTransfer.setData("text/plain",String(i));d.classList.add("dragging")});d.addEventListener("dragend",()=>d.classList.remove("dragging"));return d}
+function drawOrder(area,t){let list=document.createElement("div");list.className="draglist";dragOrder.forEach((id,pos)=>{let d=makeDrag(t.items[id],id);d.dataset.pos=pos;list.appendChild(d)});area.appendChild(list);list.addEventListener("dragover",e=>e.preventDefault());list.addEventListener("drop",e=>{e.preventDefault();let from=Number(e.dataTransfer.getData("text/plain"));let target=e.target.closest(".draggable");if(!target)return;let to=Number(target.dataset.pos),a=dragOrder.indexOf(from);dragOrder.splice(a,1);dragOrder.splice(to,0,from);drawOrder(area,t)})}
+function setupZones(area,t){area.querySelectorAll(".dropzone").forEach(z=>{z.addEventListener("dragover",e=>{e.preventDefault();z.classList.add("over")});z.addEventListener("dragleave",()=>z.classList.remove("over"));z.addEventListener("drop",e=>{e.preventDefault();z.classList.remove("over");let id=Number(e.dataTransfer.getData("text/plain"));dragMap[id]=Number(z.dataset.zone);let old=area.querySelector(`[data-item="${id}"]`);if(old)old.remove();let card=makeDrag(t.items[id],id);card.draggable=false;z.appendChild(card);z.querySelector("b")?.remove()})})}
+function check(){let t=tasks[current],ok=false,complete=true,explain="";if(t.type==="choice"){if(selected===null){alert("Спочатку оберіть відповідь.");return}ok=selected===t.answer;explain=t.explain}
+if(t.type==="order"){ok=dragOrder.every((v,i)=>v===t.answer[i]);explain="Порівняйте послідовність із логікою виконання кроків."}
+if(t.type==="categorize"||t.type==="match"){complete=Object.keys(dragMap).length===t.items.length;if(!complete){alert("Розмістіть усі картки у відповідних зонах.");return}ok=t.map.every((v,i)=>dragMap[i]===v);explain="Перевірте призначення кожної категорії та відповідність понять."}
+data.attempts++;data.tries[current]=(data.tries[current]||0)+1;let points=ok?5:0;data.best[current]=Math.max(data.best[current]||0,points);if(ok)data.answers[current]={correct:true,answer:describeAnswer(t),tries:data.tries[current]};else data.answers[current]={correct:false,answer:describeAnswer(t),tries:data.tries[current]};save();updateStats();
+$("feedback").className="feedback "+(ok?"good":"bad");$("feedback").textContent=(ok?"Правильно! +5 балів. ":"Поки що не зовсім правильно. 0 балів за цю спробу. ")+explain+" Спроба №"+data.tries[current]+".";
+$("checkBtn").disabled=true;$("nextBtn").disabled=false}
+function describeAnswer(t){if(t.type==="choice")return t.options[selected];if(t.type==="order")return dragOrder.map(i=>t.items[i]).join(" → ");return Object.entries(dragMap).map(([i,z])=>t.items[i]+" — "+t.zones[z]).join("; ")}
+$("checkBtn").onclick=check;$("nextBtn").onclick=()=>{if(current<19){current++;render()}else{switchTab("about");alert("Ви дійшли до останньої вправи! Сформуйте PDF-звіт.")}};
+$("resetTaskBtn").onclick=()=>render();
+$("changeUser").onclick=()=>{$("registerModal").classList.remove("hidden");$("nameInput").value=user.name;$("classInput").value=user.cls};
+$("clearProgress").onclick=()=>{if(confirm("Видалити всі збережені результати цього учасника?")){localStorage.removeItem(key());data=load();current=0;updateStats();render()}};
+function report(){if(!user||!data)return;let rows=tasks.map((t,i)=>{let a=data.answers[i];return [i+1,t.title,a?(a.correct?"Правильно":"Потребує повторення"):"Не виконано",data.tries[i]||0,data.best[i]||0]});let total=Object.values(data.best).reduce((a,b)=>a+b,0),done=Object.keys(data.answers).length;
+let w=window.open("","_blank");if(!w){alert("Дозвольте спливаюче вікно для формування PDF або скористайтеся друком сторінки.");return}
+w.document.write(`<html><head><meta charset="utf-8"><title>Звіт — ${user.name}</title><style>body{font:14px Arial;padding:28px;color:#18213d}h1{color:#1d438b}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbc7df;padding:7px;text-align:left}th{background:#eaf0ff}.meta{line-height:1.8}.note{margin-top:24px;color:#555}@media print{button{display:none}}</style></head><body><h1>Звіт про виконання навчального модуля</h1><div class="meta"><b>Тема:</b> Мережевий хаб: особливості професійної комунікації в цифрових спільнотах<br><b>Учасник:</b> ${escapeHtml(user.name)}<br><b>Клас:</b> ${escapeHtml(user.cls)}<br><b>Дата формування:</b> ${new Date().toLocaleString("uk-UA")}<br><b>Виконано:</b> ${done}/20<br><b>Набрано балів:</b> ${total}/100<br><b>Загальна кількість спроб:</b> ${data.attempts}</div><h2>Результати вправ</h2><table><tr><th>№</th><th>Завдання</th><th>Статус останньої відповіді</th><th>Спроби</th><th>Кращий бал</th></tr>${rows.map(r=>"<tr>"+r.map(x=>`<td>${escapeHtml(String(x))}</td>`).join("")+"</tr>").join("")}</table><p class="note">Результати збережені локально у браузері. PDF-звіт сформовано на пристрої учасника.</p><button onclick="window.print()">Друкувати / Зберегти як PDF</button><script>setTimeout(()=>window.print(),500)<\/script></body></html>`);w.document.close()}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("reportBtn").onclick=report;$("reportBtn2").onclick=report;
+if(localStorage.getItem("networkHub10:lastUser")){try{let u=JSON.parse(localStorage.getItem("networkHub10:lastUser"));$("nameInput").value=u.name;$("classInput").value=u.cls}catch(e){}}
+const oldStart=$("startBtn").onclick;$("startBtn").onclick=()=>{oldStart();if(user)localStorage.setItem("networkHub10:lastUser",JSON.stringify(user))};
+</script>
+</body></html>
